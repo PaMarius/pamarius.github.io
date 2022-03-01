@@ -1,73 +1,117 @@
-body,
-html {
-  width: 100%;
-  height: 100%;
-  font-family: 'Montserrat', sans-serif;
-    background: url(header.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+body {
+	margin: auto 0;
+	font-family: Arial;
 }
 
-h1 {
-  font-size: 3rem;
-  color: #e2dbdb;
-
-} 
-
-hr {
-  border-color: #f05f44 ;
-  border-width: 3px;
-  max-width: 65px;
+.zone {
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	margin: 0;
+	cursor: pointer;
+	transition: all 0.3s linear;
+	font-size: 2em;		
 }
 
-.btn {
-  font-weight: 700;
-  border-radius: 300px;
-  text-transform: uppercase;
+.zone:hover {
+	box-shadow: rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
 
-.btn-primary {
-  background-color: #f05f44;
-  border-color: #f05f44;
-  
+.box:hover {
+	transform: rotate(-7deg);
 }
 
-.btn-primary:hover {
-  background-color: #ee4b08;
-  border-color: #ee4b08;
-  border-width: 4px;
+/*NAVIGATION BAR*/
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
-.btn-xl {
-  padding: 1rem 2rem;
-  font-weight: bold;
+.green {
+	background: linear-gradient(green, yellow);
+	margin: 0;
 }
 
-.buffer {
-  height: 10rem;
+
+.main-nav {
+	display: flex;
+	grid-template-columns: 1fr 1fr 2fr 4fr;
+	list-style: none;
+	font-size: 0.7em;
+	margin: 0;
+	padding: 0;
 }
 
+li {
+	padding: 20px;
+}
+
+a {
+	color: #F5f5f6;
+	text-decoration: none;
+}
+
+.push {
+	margin-left: auto;
+}
+
+@media only screen and (max-width:  600px)
+	.main-nav {
+		font-size: 0.5em;
+		padding: 0;
+	}
+
+
+/*COVER*/
 .container {
-position: absolute;
-top: 25%;
-left: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh ;
 }
 
-.row {
-  position: relative;
-  left: 40%;
+.red {
+/*	background: linear-gradient(to bottom, #FF1E00, #F00083);*/
+	
 }
 
-.buton {
-  position: relative;
-  left: 40%;
-  top: 15em;
+
+/*GRID*/
+
+.blue {
+	background: linear-gradient(to right, #0874E4, #00C8C8);
+	
 }
 
-.vedem {
-  display: flex;
-  justify-content: center;
-  top
+.grid-wrapper {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.box > img {
+	width: 100%;
+}
+
+.box {
+	background-color: #444;
+	padding: 130px;
+	margin: 20px;
+}
+
+footer {
+	text-align: center;
+}
+
+/*FOOTER*/
+
+.yellow {
+	background: linear-gradient(to right, #FFD200, #F8FF00);
+}
+
+
+/*De aici continua*/
+
+.cover {
+	width:30rem;
 }
