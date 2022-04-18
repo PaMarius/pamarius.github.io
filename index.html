@@ -1,32 +1,105 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Primul meu site avansat</title>
-</head>
-<body>
-	<nav class="zone blue sticky">
-		<ul class="main-nav">
-			<li><a href="">About</li>
-			<li><a href="">Products</li>
-			<li><a href="">Our Team</li>
-			<li class="push"><a href="">Contact</li>
-		</ul>
-	</nav>
-	<div class="container zone red"><img class="cover" src="undraw.png"></div>
-	<div class="zone blue grid-wrapper">
-		<div class="box zone"><img src="files_2.png"></div>
-		<div class="box zone"><img src="server_2_2.png"></div>
-		<div class="box zone"><img src="server_3.png"></div>
-		<div class="box zone"><img src="monitor_settings_2.png"></div>
-		<div class="box zone"><img src="data_storage_2_2.png"></div>
-		<div class="box zone"><img src="monitor_coding_2.png"></div>
-		<div class="box zone"><img src="desktop_analytics_2.png"></div>
-		<div class="box zone"><img src="server_safe_2.png"></div>
-	
-	</div>
-	<footer class="zone yellow">Aici trebuie sa pun eu ceva</footer>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Sprint Game</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <!--HEADER-->
+      <div class="header">
+        <h1>Math Sprint Game</h1>
+      </div>
+
+      <!--SPLASH PAGE-->
+      <div class="card" id="splash-page">
+        <form id="start-form">
+          <div class="selection-container">
+            <!-- 10 Questions Radio Input-->
+            <div class="radio-container">
+              <label for="'value=10">10 Questions</label>
+              <input type="radio" name="questions" value="10" id="value-10" />
+              <span class="best-score"
+                ><span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+
+            <!-- 25 Questions Radio Input-->
+            <div class="radio-container">
+              <label for="'value=25">25 Questions</label>
+              <input type="radio" name="questions" value="25" id="value-25" />
+              <span class="best-score"
+                ><span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+
+            <!-- 50 Questions Radio Input-->
+            <div class="radio-container">
+              <label for="'value=50">50 Questions</label>
+              <input type="radio" name="questions" value="50" id="value-50" />
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+
+            <!-- 99 Questions Radio Input-->
+            <div class="radio-container selected-label">
+              <label for="'value=99">99 Questions</label>
+              <input type="radio" name="questions" value="99" id="value-99" />
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+          </div>
+          <!-- START BUTTON -->
+          <div class="selection-footer">
+            <button class="start" type="submit">Start Round</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Countdown Page -->
+      <div class="card" id="countdown-page" hidden>
+        <h1 class="countdown"></h1>
+      </div>
+
+      <!-- Game Page -->
+      <div class="card" id="game-page" hidden>
+        <!-- Item Container-->
+        <div class="item-container"></div>
+        <!-- Right/Wrong Buttons-->
+        <div class="item-footer">
+          <button class="wrong" onclick="select(false)">Wrong</button>
+          <button class="right" onclick="select(true)">Right</button>
+        </div>
+      </div>
+
+      <!-- Score Page-->
+      <div class="card" id="score-page" hidden>
+        <!-- Score Container -->
+        <div class="score-container">
+          <h1 class="title">Your Time</h1>
+          <h1 class="final-time"></h1>
+          <h1 class="base-time"></h1>
+          <h1 class="penalty-time"></h1>
+        </div>
+        <!-- Play Again Button -->
+        <div class="score-footer">
+          <button class="play-again" onclick="playAgain()" hidden>
+            Play Again
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPT -->
+    <script src="shuffle.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
