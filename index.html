@@ -2,146 +2,104 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chess Coders</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://chesscoders.com/wp-content/uploads/2021/02/logo-nou-text.png" />
+    <title>Math Sprint Game</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
-
-  <!-- HEADER -->
   <body>
-      <header>
-          <nav>
-              <ul class="nav-bar">
-                  <li class="header-li info-button">
-                      <ion-icon name="information-circle-outline"></ion-icon>
-                    </li>
-                    <li class="header-li"><a href="" style="color: white; text-decoration: none;">Training Programme</a></li>
-                    <li class="header-li acc-button"><ion-icon name="person-outline"></ion-icon></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="alert align hidden">
-            <button class="close-btn-alert">&times;</button>
-            <p>Coming soon 💻</p>
-            
-        </div>    
-        
-    <section>
+    <div class="game-container">
+      <!--HEADER-->
+      <div class="header">
+        <h1>Math Sprint Game</h1>
+      </div>
 
-    <!-- INTRODUCTION -->
-    <div class="introduction">
-        <h1 class="align title-size">Introduction</h1>
-        <div>
-            <p>This spring, Chess Coders offers a <u>free training programme</u>, specifically tailored for students with high interest in a Web Development career.</p>
-            <p>Before a starting out, please consult our crafted list of useful resources to consult during your training:
-            <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Official HTML Documentation</a> - Mozilla Developer Network</li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Official CSS Documentation</a> - Mozilla Developer Network</li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Official JS Documentation</a> - Mozilla Developer Network</li>
-                <li><a href="https://w3schools.com" style="color: blue;">W3Schools.org</a> - Learn to Code with the world's largest web developer site.</li>
-                </ul>
-            </p>
-        </div>
-        <p class="bold chess-coders" style="font-size: 25px; margin: 10px 0px 30px 0px;">
-            <span style="margin-right:5px;">Come join us at</span> 
-            <span><span class="chess">CHESS</span><span class="coders">CODERS</span></span>
-        </p>
-        
-    </div>
+      <!--SPLASH PAGE-->
+      <div class="card" id="splash-page">
+        <form id="start-form">
+          <div class="selection-container">
+            <!-- 10 Questions Radio Input-->
+            <div class="radio-container">
+              <label for="'value=10">10 Questions</label>
+              <input type="radio" name="questions" value="10" id="value-10" />
+              <span class="best-score"
+                ><span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
 
-      <!-- AT A GLANCE  -->
-    <div>
-        <h2 class="align title-size">At a glance</h2>
-        <div class="glance">
-            <div class="img img1">
-                <div class="text-glance">HTML5</div>
-                <div>
-                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="200" height="200">
-                </div>
+            <!-- 25 Questions Radio Input-->
+            <div class="radio-container">
+              <label for="'value=25">25 Questions</label>
+              <input type="radio" name="questions" value="25" id="value-25" />
+              <span class="best-score"
+                ><span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
             </div>
-            <div class="img">
-                <div class="text-glance">CSS3</div>
-                <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png" width="200" height="200">
-                </div>
-            </div>
-            <div class="img img1">
-                <div class="text-glance">JavaScript</div>
-                <div>
-                    <img src="javascript.png" width="200" height="200">
-                </div>
-            </div>
-        </div>   
-        <div class="align">
-            <div class="grid1 ">
-                <div>
-                    <div class="grid2" style="background: black; color: white;">Technology</div>
-                    <div class="grid2 bold">HTML5</div>
-                    <div class="grid2 bold" style="background: rgb(202, 200, 200);">CSS3</div>
-                    <div class="grid2 bold" style="border-bottom: 1px solid black;">JavaScript</div>
-                </div>
-                <div>
-                    <div class="grid3" style="background: black; color: white;">Estimated learning time</div>
-                    <div class="grid3 bold">10 hours</div>
-                    <div class="grid3 bold" style="background: rgb(202, 200, 200);">20 hours</div>
-                    <div class="grid3 bold" style="border-bottom: 1px solid black;">a lifetime</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-
-    <!-- GET IN TOUCH -->
-    <div class="gitouch ">
-      <h3 class="title-size">Get in touch</h3>
-      <p class="low-title-size align">Use the form below to contact us. Make sure to fill in all of the <em>required</em> fields.</p>
-        <form method="GET">
-            <input type="text" placeholder="Your name..." name="name" class="width100 border-radius"><br>
-            <input type="email" placeholder="Your email..." required name="email" class="width100 border-radius"><br>
-            <div class="low-title-size">
-                Please choose a date<br>
+            <!-- 50 Questions Radio Input-->
+            <div class="radio-container">
+              <label for="'value=50">50 Questions</label>
+              <input type="radio" name="questions" value="50" id="value-50" />
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
             </div>
-                <input type="date" name="birthday" class="width100 border-radius"><br>  
-            <div class="low-title-size">
-                Please choose a category<br>
-            </div> 
-            <select name="category" class="width100 border-radius">
-                <option value="general" >General</option>
-                <option value="technical">Technical</option>
-                <option value="other">Other</option>
-            </select><br>
-            <div class="low-title-size ">Your message</div>
-            <span class="resize">
-                <input type="text" name="message" style="height: 100%; width: 100%;" class="border-radius">
-            <span></span></span>
-            <br>
-            <div class="checkbox">
-                <input type="checkbox" required class="small-checkbox">
-                <div class="low-title-size center">I agree to the terms and conditions</div>
-            </div><br>
-            <input type="submit" value="Send message >" class="width100 send-button"><br>
+
+            <!-- 99 Questions Radio Input-->
+            <div class="radio-container selected-label">
+              <label for="'value=99">99 Questions</label>
+              <input type="radio" name="questions" value="99" id="value-99" />
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+          </div>
+          <!-- START BUTTON -->
+          <div class="selection-footer">
+            <button class="start" type="submit">Start Round</button>
+          </div>
         </form>
-    </div>
-    </section>
-    <footer>
-        Made with <ion-icon name="heart-outline"></ion-icon> by <a href="https://chesscoders.com/" target="_blank" style="color: rgb(16, 119, 109);">Chess Coders</a>
-    </footer>
+      </div>
 
-    <!-- Scipt link-->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+      <!-- Countdown Page -->
+      <div class="card" id="countdown-page" hidden>
+        <h1 class="countdown"></h1>
+      </div>
+
+      <!-- Game Page -->
+      <div class="card" id="game-page" hidden>
+        <!-- Item Container-->
+        <div class="item-container"></div>
+        <!-- Right/Wrong Buttons-->
+        <div class="item-footer">
+          <button class="wrong" onclick="select(false)">Wrong</button>
+          <button class="right" onclick="select(true)">Right</button>
+        </div>
+      </div>
+
+      <!-- Score Page-->
+      <div class="card" id="score-page" hidden>
+        <!-- Score Container -->
+        <div class="score-container">
+          <h1 class="title">Your Time</h1>
+          <h1 class="final-time"></h1>
+          <h1 class="base-time"></h1>
+          <h1 class="penalty-time"></h1>
+        </div>
+        <!-- Play Again Button -->
+        <div class="score-footer">
+          <button class="play-again" onclick="playAgain()" hidden>
+            Play Again
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPT -->
+    <script src="shuffle.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
-
-
